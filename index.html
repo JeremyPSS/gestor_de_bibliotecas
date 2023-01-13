@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ECBook - Biblioteca Virtual</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!--Toastify EXPORT -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Custom Main EXPORT-->
+    <script src="./js/main.js" type="module"></script>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome EXPORT -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-xl-5"></div>
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>CBook</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-2 d-none d-lg-block">
+
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Bibliotecas Digitales</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <a href="https://www.casadellibro.com/" class="nav-item nav-link">Casa del libro</a>
+                        <a href="https://www.bubok.es/" class="nav-item nav-link">Bubok</a>
+                        <a href="https://www.24symbols.com/?locale=es" class="nav-item nav-link">24symbols</a>
+                        <a href="https://www.conricyt.mx/" class="nav-item nav-link">Conricyt</a>
+                        <a href="https://unesdoc.unesco.org/?locale=es" class="nav-item nav-link">Unesco</a>
+                        <a href="https://repositorio.unam.mx/" class="nav-item nav-link">UNAM</a>
+                        <a href="https://www.loc.gov/collections/" class="nav-item nav-link">Library of Congress</a>
+                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/" class="nav-item nav-link">Servantes Virtual</a>
+                        <a href="https://www.europeana.eu/en" class="nav-item nav-link">Europeana</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>CBook</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="detail.html" class="nav-item nav-link">Buscar</a>
+                            <a href="shop.html" class="nav-item nav-link">Acerca de nosotros</a>
+
+                        </div>
+                        <div class="navbar-nav ml-auto py-0">
+                            <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Iniciar Sesion</a>
+                            <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarme</a>
+                            <a href="" class="nav-item nav-link logged-in" id="logout">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+                <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 410px;">
+                            <img class="img-fluid" src="img/ejemplo02.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <!-- <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4> -->
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                    <!-- <a href="" class="btn btn-light py-2 px-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/fotofondo.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/logo/fotocarrusell1.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/logo/fotocarrusell2.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/logo/fotocarrusell3.jpg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/logo/fotocarrusell4.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">+10 Bibliotecas Digitales Vinculadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-prev-icon mb-n2"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-next-icon mb-n2"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h3>SignUp</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+                    <form id="signup-form">
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="signup-email" class="form-control mb-3" placeholder="Title" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="signup-password" class="form-control mb-3" placeholder="Password" required>
+
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>SignIn</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <label for="email">Email</label>
+                        <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="login-password" class="form-control mb-3" placeholder="*******" required>
+                        <button type="submit" class="btn btn-success w-100 mb-4">Login</button>
+                        <button type="button" class="btn btn-info" id="googleLogin">Google</button>
+                        <button type="button" class="btn btn-primary" id="facebookLogin">Facebook</button>
+                        <button type="button" class="btn btn-dark" id="githubLogin">Github</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FINAL Modal -->
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">BIENVENIDO A ECBOOK</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Un lugar donde podras encontrar</h6>
+            <p class="card-text">
+                El libro que quieras de diferentes bibliotecas en linea. Realizando una simple consulta desde un simple lugar.
+            </p>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h1 class="titulos ">Coleccion de Bibliotecas Digitales Vinculadas</h1>
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="owl-carousel vendor-carousel">
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.casadellibro.com/">
+                            <img src="img/logo/logo-casa-del-libro.jpg" alt="">
+                            <p>Casa del Libro</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.bubok.es/">
+                            <img src="img/logo/bubok_logo.png" alt="">
+                            <p>Bubok</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.24symbols.com/?locale=es">
+                            <img src="img/logo/24s_logo.png" alt="">
+                            <p>24symbols</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.conricyt.mx/">
+                            <img src="img/logo/conricyt.png" alt="">
+                            <p>conricyt</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://unesdoc.unesco.org/?locale=es">
+                            <img src="img/logo/unesco_logo.jpg" alt="">
+                            <p>Unesco</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.europeana.eu/en">
+                            <img src="img/logo/Europeana_log.png" alt="">
+                            <p>Europeana</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://repositorio.unam.mx/">
+                            <img src="img/logo/unam_logo.png" alt="">
+                            <p>UNAM</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.loc.gov/collections/">
+                            <img src="img/logo/library_of_congress.png" alt="">
+                            <p>LOC</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/">
+                            <img src="img/logo/virtualcervantes_logo.png" alt="">
+                            <p>Servantes Virtual</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://libros.metabiblioteca.org/">
+                            <img src="img/logo/metabiblioteca_logo.png" alt="">
+                            <p>Meta biblioteca</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.ellibrototal.com/">
+                            <img src="img/logo/ellibrototal_logo.jpg" alt="">
+                            <p>Libro total</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.cambridge.org/">
+                            <img src="img/logo/cambridge_logo.png" alt="">
+                            <p>Cambridge</p>
+                        </a>
+                    </div>
+                    <div class="vendor-item border p-4 centerthings">
+                        <a href="https://www.elibro.com/">
+                            <img src="img/logo/elibro_logo.png" alt="">
+                            <p>E-libro</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <a href="" class="text-decoration-none">
+                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>CBook</h1>
+                </a>
+                <p>Nuestro software permite ...</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Calle Napo, entre N y Ñ,Las Palmeras, Santa Rosa, Ecuador</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>ecbook@hotmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+593 988648165</p>
+            </div>
+        </div>
+        <div class="row border-top border-light mx-xl-5 py-4">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-dark">
+                    &copy; <a class="text-dark font-weight-semi-bold" href="#">ECBOOK</a>
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+
+    <!-- SCRIPTS EXPORT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <!-- Toastify js EXPORT -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
