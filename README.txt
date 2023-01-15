@@ -1,4 +1,4 @@
-Este proyecto fue hecho poyecto fue hecho por:
+Este proyecto fue hecho por:
 - Angel Camacho 
 - Jeremy Lopez
 - Oscar Cuenca
