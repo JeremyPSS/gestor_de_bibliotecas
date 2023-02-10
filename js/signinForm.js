@@ -7,13 +7,11 @@ signInForm.addEventListener('submit', async e => {
     e.preventDefault()
     const email = signInForm['login-email'].value;
     const password = signInForm['login-password'].value;
-
     try {
-
         const credentials = await signInWithEmailAndPassword(auth, email, password)
-        console.log(credentials)
         const modal = bootstrap.Modal.getInstance(document.querySelector('#signinModal'));
         modal.hide()
+        location.reload()
         showMessage('Welcome ' + credentials.user.email)
     } catch (error) {
         if (error.code === "auth/wrong-password") {

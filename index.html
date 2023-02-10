@@ -11,7 +11,7 @@
     <!--Custom Main EXPORT-->
     <script src="./js/main.js" type="module"></script>
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,6 +25,10 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Ventana Alerta -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/confMessage.js"></script>
+
 </head>
 
 <body>
@@ -35,7 +39,7 @@
         <div class="row bg-secondary py-2 px-xl-5"></div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
+                <a href="index.html" class="text-decoration-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>CBook</h1>
                 </a>
             </div>
@@ -48,22 +52,21 @@
     <div class="container-fluid mb-5">
         <div class="row border-top px-xl-5">
             <div class="col-lg-2 d-none d-lg-block">
-
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Bibliotecas Digitales</h6>
-                    <i class="fa fa-angle-down text-dark"></i>
+                    <h6 class="m-0" style="color: white">Bibliotecas Digitales</h6>
+                    <i class="fa fa-angle-down text-white"></i>
                 </a>
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        <a href="https://www.casadellibro.com/" class="nav-item nav-link">Casa del libro</a>
-                        <a href="https://www.bubok.es/" class="nav-item nav-link">Bubok</a>
-                        <a href="https://www.24symbols.com/?locale=es" class="nav-item nav-link">24symbols</a>
-                        <a href="https://www.conricyt.mx/" class="nav-item nav-link">Conricyt</a>
-                        <a href="https://unesdoc.unesco.org/?locale=es" class="nav-item nav-link">Unesco</a>
-                        <a href="https://repositorio.unam.mx/" class="nav-item nav-link">UNAM</a>
-                        <a href="https://www.loc.gov/collections/" class="nav-item nav-link">Library of Congress</a>
-                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/" class="nav-item nav-link">Servantes Virtual</a>
-                        <a href="https://www.europeana.eu/en" class="nav-item nav-link">Europeana</a>
+                        <a href="https://www.casadellibro.com/" class="nav-item nav-link" target="_blank">Casa del libro</a>
+                        <a href="https://www.bubok.es/" class="nav-item nav-link" target="_blank">Bubok</a>
+                        <a href="https://www.24symbols.com/?locale=es" class="nav-item nav-link" target="_blank">24symbols</a>
+                        <a href="https://www.conricyt.mx/" class="nav-item nav-link" target="_blank">Conricyt</a>
+                        <a href="https://unesdoc.unesco.org/?locale=es" class="nav-item nav-link" target="_blank">Unesco</a>
+                        <a href="https://repositorio.unam.mx/" class="nav-item nav-link" target="_blank">UNAM</a>
+                        <a href="https://www.loc.gov/collections/" class="nav-item nav-link" target="_blank">Library of Congress</a>
+                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/" class="nav-item nav-link" target="_blank">Servantes Virtual</a>
+                        <a href="https://www.europeana.eu/en" class="nav-item nav-link" target="_blank">Europeana</a>
                     </div>
                 </nav>
             </div>
@@ -78,9 +81,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="search.html" class="nav-item nav-link">Buscar</a>
+                            <a class="nav-item nav-link" id="neBu" type="button">Buscar</a>
                             <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
-
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Iniciar Sesion</a>
@@ -162,19 +164,19 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header ">
-                    <h3>SignUp</h3>
+                    <h3 style="color:white">Registrarse</h3>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5">
                     <form id="signup-form">
 
-                        <label for="email">Email:</label>
-                        <input type="text" id="signup-email" class="form-control mb-3" placeholder="Title" required>
+                        <label for="email">Correo:</label>
+                        <input type="text" id="signup-email" class="form-control mb-3" placeholder="Email" required>
 
-                        <label for="password">Password:</label>
+                        <label for="password">Contraseña:</label>
                         <input type="password" id="signup-password" class="form-control mb-3" placeholder="Password" required>
 
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>
             </div>
@@ -184,16 +186,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>SignIn</h3>
+                    <h3 style="color:white">Iniciar Sesión</h3>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="login-form">
-                        <label for="email">Email</label>
+                        <label for="email">Correo</label>
                         <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
-                        <label for="password">Password:</label>
+                        <label for="password">Contraseña:</label>
                         <input type="password" id="login-password" class="form-control mb-3" placeholder="*******" required>
-                        <button type="submit" class="btn btn-success w-100 mb-4">Login</button>
+                        <button type="submit" class="btn btn-success w-100 mb-4">INGRESAR</button>
                         <button type="button" class="btn btn-info" id="googleLogin">Google</button>
                         <button type="button" class="btn btn-primary" id="facebookLogin">Facebook</button>
                         <button type="button" class="btn btn-dark" id="githubLogin">Github</button>
@@ -204,7 +206,7 @@
     </div>
     <!-- FINAL Modal -->
     <br>
-    <div class="card">
+    <div class="card ">
         <div class="card-body">
             <h4 class="card-title">BIENVENIDO A ECBOOK</h4>
             <h6 class="card-subtitle mb-2 text-muted">Un lugar donde podras encontrar</h6>
@@ -226,79 +228,79 @@
             <div class="col">
                 <div class="owl-carousel vendor-carousel">
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.casadellibro.com/">
+                        <a href="https://www.casadellibro.com/" target="_blank">
                             <img src="img/logo/logo-casa-del-libro.jpg" alt="">
                             <p>Casa del Libro</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.bubok.es/">
+                        <a href="https://www.bubok.es/" target="_blank">
                             <img src="img/logo/bubok_logo.png" alt="">
                             <p>Bubok</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.24symbols.com/?locale=es">
+                        <a href="https://www.24symbols.com/?locale=es" target="_blank">
                             <img src="img/logo/24s_logo.png" alt="">
                             <p>24symbols</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.conricyt.mx/">
+                        <a href="https://www.conricyt.mx/" target="_blank">
                             <img src="img/logo/conricyt.png" alt="">
                             <p>conricyt</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://unesdoc.unesco.org/?locale=es">
+                        <a href="https://unesdoc.unesco.org/?locale=es" target="_blank">
                             <img src="img/logo/unesco_logo.jpg" alt="">
                             <p>Unesco</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.europeana.eu/en">
+                        <a href="https://www.europeana.eu/en" target="_blank">
                             <img src="img/logo/Europeana_log.png" alt="">
                             <p>Europeana</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://repositorio.unam.mx/">
+                        <a href="https://repositorio.unam.mx/" target="_blank">
                             <img src="img/logo/unam_logo.png" alt="">
                             <p>UNAM</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.loc.gov/collections/">
+                        <a href="https://www.loc.gov/collections/" target="_blank">
                             <img src="img/logo/library_of_congress.png" alt="">
                             <p>LOC</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/">
+                        <a href="https://www.cervantesvirtual.com/portales/biblioteca_nacional_de_mexico/" target="_blank">
                             <img src="img/logo/virtualcervantes_logo.png" alt="">
                             <p>Servantes Virtual</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://libros.metabiblioteca.org/">
+                        <a href="https://libros.metabiblioteca.org/" target="_blank">
                             <img src="img/logo/metabiblioteca_logo.png" alt="">
                             <p>Meta biblioteca</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.ellibrototal.com/">
+                        <a href="https://www.ellibrototal.com/" target="_blank">
                             <img src="img/logo/ellibrototal_logo.jpg" alt="">
                             <p>Libro total</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.cambridge.org/">
+                        <a href="https://www.cambridge.org/" target="_blank">
                             <img src="img/logo/cambridge_logo.png" alt="">
                             <p>Cambridge</p>
                         </a>
                     </div>
                     <div class="vendor-item border p-4 centerthings">
-                        <a href="https://www.elibro.com/">
+                        <a href="https://www.elibro.com/" target="_blank">
                             <img src="img/logo/elibro_logo.png" alt="">
                             <p>E-libro</p>
                         </a>
@@ -315,9 +317,9 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
-            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5 text-white">
                 <a href="" class="text-decoration-none">
-                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>CBook</h1>
+                    <h1 class="mb-4 display-5 font-weight-semi-bold text-white"><span class="text-primary font-weight-bold border border-white px-3 mr-1 ">E</span>CBook</h1>
                 </a>
                 <p>ECBook, una gestor de bibliotecas online. Permite realizar busquedas sobre palabras claves establecidas en diferentes bibliotecas y repositorios online de otras universidades del mundo.</p>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Calle Napo, entre N y Ñ,Las Palmeras, Santa Rosa, Ecuador</p>
@@ -327,8 +329,8 @@
         </div>
         <div class="row border-top border-light mx-xl-5 py-4">
             <div class="col-md-6 px-xl-0">
-                <p class="mb-md-0 text-center text-md-left text-dark">
-                    &copy; <a class="text-dark font-weight-semi-bold" href="#">ECBOOK</a>
+                <p class="mb-md-0 text-center text-md-left text-white">
+                    &copy; <a class="text-white font-weight-semi-bold text-white" href="#">ECBOOK</a>
 
                 </p>
             </div>
@@ -359,6 +361,10 @@
     </script>
     <!-- Toastify js EXPORT -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+    <!--    Plugin sweet Alert 2  -->
+
 </body>
 
 </html>

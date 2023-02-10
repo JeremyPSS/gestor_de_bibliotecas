@@ -1,6 +1,7 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
 import { auth } from './firebase.js'
 import { loginCheck } from './loginCheck.js'
+import { aprobado } from './confMessage.js'
 import './signupForm.js'
 import './logout.js'
 import './signinForm.js'
@@ -11,6 +12,7 @@ import './githubLogin.js'
 //INICIA EL AUTENTICADOR
 onAuthStateChanged(auth, async(user) => {
     loginCheck(user)
+    aprobado(user)
 });
 
 //ACABA LO DE AUTENTICADOR

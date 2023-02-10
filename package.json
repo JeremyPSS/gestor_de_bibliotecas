@@ -1,5 +1,8 @@
 {
-  "dependencies": {
-    "firebase": "^9.15.0"
-  }
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "firebase": "^9.15.0",
+        "sweetalert2": "^11.7.1",
+        "type": "module"
+    }
 }
